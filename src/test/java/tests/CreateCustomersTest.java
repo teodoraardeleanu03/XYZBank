@@ -13,7 +13,7 @@ public class CreateCustomersTest extends SharedData {
 
     @Test
     public void automationTest() {
-        CustomerModel testData = new CustomerModel("src/test/resources/CustomersData.json");
+        //CustomerModel testData = new CustomerModel("CustomersData.json");
 
         LoginPage loginPage = new LoginPage(getDriver());
         loginPage.loginBankManager();
@@ -21,8 +21,8 @@ public class CreateCustomersTest extends SharedData {
         ManagerPage managerPage = new ManagerPage(getDriver());
         managerPage.createCustomer();
 
-        List<String> firstNameValueList = Arrays.asList("Alex 1","Alex 2","Alex 3");
-        List<String> lastNameValueList = Arrays.asList("Virlan 1","Virlan 2","Virlan 3");
+        List<String> firstNameValueList = Arrays.asList("Teodora 1","Teodora 2","Teodora 3");
+        List<String> lastNameValueList = Arrays.asList("Ardeleanu 1","Ardeleanu 2","Ardeleanu 3");
         List<String> postCodeValueList = Arrays.asList("E10AA","E10AB","E10AC");
 
         CustomerPage customerPage = new CustomerPage(getDriver());
