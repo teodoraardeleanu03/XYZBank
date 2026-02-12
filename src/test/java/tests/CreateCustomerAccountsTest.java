@@ -71,7 +71,5 @@ public class CreateCustomerAccountsTest extends SharedData {
 
         WebElement searchCustomerElement = getDriver().findElement(By.xpath("//input[@placeholder='Search Customer']"));
         searchCustomerElement.sendKeys(fullName);
-
-
     }
 }
