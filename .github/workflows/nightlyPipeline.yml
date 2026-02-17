@@ -6,10 +6,11 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Regression pipeline
+name: Nightly pipeline
 
 on:
   workflow_dispatch:
+    - cron: '0 21 * * 1-5'
 
 jobs:
   build:
@@ -17,12 +18,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Set up JDK 17
-      uses: actions/setup-java@v4
-      with:
-        java-version: '17'
-        distribution: 'temurin'
-        cache: maven
-    - name: Run automation test
-      run: mvn clean install
+      - uses: actions/checkout@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+      - name: Run automation test
+        run: mvn clean install
