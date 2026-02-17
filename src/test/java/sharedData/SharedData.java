@@ -14,7 +14,7 @@ public class SharedData {
     private String testName;
 
     //fac un mecanism care sa deschida browserul
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void prepareEnvironment(){
         testName = this.getClass().getSimpleName();
 
@@ -31,7 +31,7 @@ public class SharedData {
     }
 
     //fac un mecanism care sa inchida browseru
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void clearEnvironment(){
         driver.quit();
         LogUtility.finishTest(testName);
