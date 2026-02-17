@@ -10,6 +10,7 @@ name: Regression pipeline
 
 on:
   workflow_dispatch:
+    - cron: '0 21 * * 1-5'
 
 jobs:
   build:
