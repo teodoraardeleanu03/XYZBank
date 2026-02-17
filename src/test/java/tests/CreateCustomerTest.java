@@ -14,7 +14,7 @@ public class CreateCustomerTest extends SharedData {
     //key-1..value
     //firstName=[Alex,Madalina,Oana]
 
-    @Test
+    @Test(groups = {SuiteType.REGRESSION_SUITE, SuiteType.SMOKE_SUITE, SuiteType.CUSTOMER_SUITE, SuiteType.ACCOUNT_SUITE })
     public void automationTest() {
         CustomerModel testData = new CustomerModel("src/test/resources/CustomerData.json");
 
